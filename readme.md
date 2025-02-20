@@ -48,7 +48,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 For any questions or feedback, feel free to reach out:
 
 - **Email**: adelajafaithsamuel@gmail.com
-- **GitHub**: [your-username](https://github.com/samuel-faith)
+- **GitHub**: [samuel-faith](https://github.com/samuel-faith)
 
 
 Thank you for checking out the **Dictionary Web App**! I hope you find it useful and enjoyable. 😊
