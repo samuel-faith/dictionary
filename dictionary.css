@@ -1,0 +1,262 @@
+/* Theme Variables */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --hover-color: #0056b3;
+    --border-color: #ddd;
+    --error-color: #ff4444;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #1a73e8;
+    --hover-color: #1557b7;
+    --border-color: #444;
+    --error-color: #ff6666;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding:0 0 0 1rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Heebo", serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    max-width: 800px;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+header h3 {
+    font-family: "Heebo", cursive;
+    font-size: .5rem;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 700px;
+}
+
+#search-input {
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    width: 300px;
+    font-size: 1rem;
+}
+
+
+
+#search-form button:hover {
+    background-color: var(--hover-color);
+}
+
+#error-message {
+    color: var(--error-color);
+    margin-top: 0.5rem;
+    display: none;
+}
+
+#error-message.hidden {
+    display: none;
+}
+
+#error-message:not(.hidden) {
+    display: block;
+}
+
+/* Theme Toggle Switch */
+.toggle-switch {
+    width: 45px;
+    height: 20px;
+    background-color: #444;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+[data-theme="dark"] .slider {
+    transform: translateX(30px);
+}
+
+.theme-toggle span {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+#font-select {
+    font-size: 1em;
+    font-family: "Heebo", serif;
+    color: #000;
+    border: none;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 400px;
+    justify-content: center;
+}
+
+.toggles {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.word-class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.word-class hr, hr {
+    flex-grow: 1;
+    height: 2px;
+    margin-top: 1rem;
+    opacity: 50%;
+}
+
+svg {
+    width: 40px;
+}
+
+/* Main Content */
+
+main {
+    max-width: 800px;
+}
+
+#word-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#word-info p {
+    margin-bottom: 1rem;
+}
+
+#word-info h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#word-info ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#word-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+#word-info blockquote {
+    margin: 1rem 0;
+    padding: 0 0 0 1.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 0 0 0 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
+
+
+
+    /* Mobile View (max-width: 768px) */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            padding: 1rem;
+        }
+    
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin: 0;
+        }
+    
+        #search-form {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 300px;
+        }
+    
+        #search-input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    
+        .options, .toggles {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .theme-toggle {
+            margin-top: 1rem;
+        }
+    
+        footer {
+            text-align: center;
+            padding: 1rem;
+        }
+    }

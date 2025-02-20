@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Web App</title>
+    <link rel="stylesheet" href="./dictionary.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="options">
+            <div class="notebook">
+                <svg height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" transform="rotate(180)matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M101.095,73.069c-6.169-0.008-11.617-2.46-15.671-6.498c-4.038-4.062-6.49-9.511-6.498-15.68 c0.008-6.17,2.46-11.617,6.49-15.68c4.062-4.03,9.51-6.481,15.679-6.497l346.336,0.007V0.007L101.095,0 C72.99,0.016,50.22,22.786,50.211,50.892v410.216C50.22,489.214,72.99,511.984,101.095,512h360.694V73.069H101.095z M433.074,483.285H101.095c-12.242-0.024-22.145-9.927-22.169-22.177V96.64c6.706,3.253,14.205,5.144,22.169,5.144h331.978V483.285 z"></path> </g> </g></svg>"
+            </div>
+            <div class="toggles">
+                <div class="font-select">
+                    <select title="select" id="font-select">
+                        <option value="1">Serif</option>
+                        <option value="2">Helvetica</option>
+                        <option value="3">Times New Roman</option>
+                    </select>
+                </div>
+                <div class="theme-toggle">
+                    <div class="toggle-switch">
+                        <div class="slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search for a word..." required>
+           
+        </form>
+        <div id="error-message" class="hidden">Please enter a word to search.</div>
+    </header>
+
+    <main>
+        <section id="word-info">
+            <h2>keyboard</h2>
+            <p id="transcription">/'ki:bɔ:d/</p>
+            <div class="word-class">
+                <h3>Noun</h3><hr>
+            </div>
+            <ul>
+                <li>A set of keys used to operate a typewriter, computer, etc.</li>
+                <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+                <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+            </ul>
+            <p>Synonyms <span class="synonyms">electronic keyboard</span></p>
+
+            <div class="word-class">
+                <h3>Verb</h3><hr>
+            </div>
+            <p>Meaning</p>
+            <ul>
+                <li>To type on a computer keyboard.</li>
+            </ul>
+            <blockquote>“Keyboarding is the part of this job I hate the most.”</blockquote>
+            <hr>
+
+            <button id="play-audio">Play Pronunciation</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Source: <a rel="noopener" href="https://en.wiktionary.org/wiki/keyboard" target="_blank">https://en.wiktionary.org/wiki/keyboard</a></p>
+    </footer>
+
+    <script src="./dictionary.js"></script>
+</body>
+</html>
